@@ -1,6 +1,6 @@
 package date3355_project.view;
 
-import date3355_project.Model.PlaceDTO;
+import date3355_project.Model.dto.AllPlaceDTO;
 import date3355_project.controller.DatePlanManager;
 
 public class MainMenu {
@@ -10,9 +10,8 @@ public class MainMenu {
     public void mainMenu() {
 
         dpm.initInsert();
-        for(PlaceDTO i : dpm.getPlaces()) {
-            System.out.println(i.toString());
+        for(AllPlaceDTO i : dpm.getPlaces()) {
+            System.out.println("id = " + (dpm.getPlaces().indexOf(i) + 1)  + i.toString());
         }
     }
-
 }
