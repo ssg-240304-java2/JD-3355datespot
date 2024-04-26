@@ -1,19 +1,19 @@
-package date3355_project.Model;
+package date3355_project.Model.dto;
 
 import java.time.LocalDate;
 
-public class AttractionDTO extends PlaceDTO {
+public class AttractionDTO extends AllPlaceDTO {
 
     private String subCategory;     // 서브 카테고리 (볼거리/할거리)
     private LocalDate startDate;    // 시작일
     private LocalDate endDate;      // 종료일
     private boolean reservation;    // 예약가능여부
 
-    public AttractionDTO(int ID, String placeName, String region, boolean parkingLot,
+    public AttractionDTO(String placeName, String region, boolean parkingLot,
                          int price, String openTime, String closeTime, String closedDay,
                          String subCategory, LocalDate startDate, LocalDate endDate, boolean reservation) {
 
-        super(ID, placeName, region, parkingLot, price, openTime, closeTime, closedDay);
+        super(placeName, region, parkingLot, price, openTime, closeTime, closedDay);
         this.subCategory = subCategory;
         this.startDate = startDate;
         this.endDate = endDate;

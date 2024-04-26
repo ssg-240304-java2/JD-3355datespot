@@ -1,16 +1,16 @@
-package date3355_project.Model;
+package date3355_project.Model.dto;
 
-public class RestaurantDTO extends PlaceDTO {
+public class RestaurantDTO extends AllPlaceDTO {
 
     private String recommendMenu;   // 추천메뉴
     private boolean blueRibbon;     // 블루리본 유무
     private boolean reservation;    // 예약가능 유무
 
-    public RestaurantDTO(int ID, String placeName, String region, boolean parkingLot,
+    public RestaurantDTO(String placeName, String region, boolean parkingLot,
                          int price, String openTime, String closeTime, String closedDay,
                          String recommendMenu, boolean blueRibbon, boolean reservation) {
 
-        super(ID, placeName, region, parkingLot, price, openTime, closeTime, closedDay);
+        super(placeName, region, parkingLot, price, openTime, closeTime, closedDay);
         this.recommendMenu = recommendMenu;
         this.blueRibbon = blueRibbon;
         this.reservation = reservation;

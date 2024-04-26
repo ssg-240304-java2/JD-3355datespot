@@ -1,10 +1,9 @@
-package date3355_project.Model;
+package date3355_project.Model.dto;
 
 import java.time.LocalTime;
 
-public class PlaceDTO {
+public class AllPlaceDTO {
 
-    private int ID;                 // 고유번호
     private String placeName;       // 장소 이름
     private String region;          // 지역
     private boolean parkingLot;     // 주차장 유무
@@ -18,12 +17,12 @@ public class PlaceDTO {
     // 이용가능여부는 오픈시간과 마감시간 데이터로 기능 파트에서 구현할 가능성이 있어서 비워놨습니다.
 
     // Constructor, 생성자에 설명까지 붙여서 생성해야 하면 너무 길어질거 같아서 설명 넣기는 getter, setter로 뺏습니다!
-    public PlaceDTO() {
+    public AllPlaceDTO() {
     }
 
-    public PlaceDTO(int ID, String placeName, String region, boolean parkingLot,
-                    int price, String openTime, String closeTime, String closedDay) {
-        this.ID = ID;
+    public AllPlaceDTO(String placeName, String region, boolean parkingLot,
+                       int price, String openTime, String closeTime, String closedDay) {
+
         this.placeName = placeName;
         this.region = region;
         this.parkingLot = parkingLot;
@@ -34,14 +33,6 @@ public class PlaceDTO {
     }
 
     // Getter / Setter
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
-
     public String getPlaceName() {
         return placeName;
     }
@@ -109,9 +100,7 @@ public class PlaceDTO {
     // toString
     @Override
     public String toString() {
-        return "PlaceDTO{" +
-                "ID=" + ID +
-                ", placeName='" + placeName + '\'' +
+        return ", placeName='" + placeName + '\'' +
                 ", region='" + region + '\'' +
                 ", parkingLot=" + parkingLot +
                 ", price=" + price +
