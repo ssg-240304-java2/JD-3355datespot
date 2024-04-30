@@ -120,4 +120,5 @@ public class AllPlaceDTO {
                 ", closedDay='" + closedDay + '\''
                 ;
     }
+
 }
