@@ -62,12 +62,5 @@ public class AttractionDTO extends AllPlaceDTO {
                 '}';
     }
 
-    public String toString1() { //출력결과를 깔끔하게 하고 싶어서 추가한 부분(고유진)
-        return super.toString1() +
-                ", 서브 카테고리 ='" + subCategory + '\'' +
-                ", 시작날짜=" + startDate +
-                ", 마김날짜=" + endDate +
-                ", 예약여부=" + reservation +
-                '}';
-    }
+
 }

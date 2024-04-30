@@ -110,14 +110,4 @@ public class AllPlaceDTO {
                 ;
     }
 
-    public String toString1() {//출력결과를 깔끔하게 하고 싶어서 추가한 부분(고유진)
-        return " { 장소명='" + placeName + '\'' +
-                ", 지역='" + region + '\'' +
-                ", 주차가능=" + parkingLot +
-                ", 가격=" + price +
-                ", 오픈시간=" + openTime +
-                ", 마감시간=" + closeTime +
-                ", 휴일='" + closedDay + '\''
-                ;
-    }
 }

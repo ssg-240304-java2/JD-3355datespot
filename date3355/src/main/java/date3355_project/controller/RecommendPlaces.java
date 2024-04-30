@@ -109,7 +109,7 @@ public class RecommendPlaces {
                 int count = Math.min(3, cafes.size()); // min함수를 이용해서 리스트의 개수가 3개 이하가 나올 수도 있기 때문에 제한해주기 위해
                 for (int i = 0; i < count; i++) {
                     CafeDTO cafe = cafes.get(i); // 이미 List가 섞인 상태에서 갖고와줌
-                    System.out.println(cafe.toString1());
+                    System.out.println(cafe);
                 }
             }
         } else if (num2 == 2) { // 레스토랑
@@ -126,7 +126,7 @@ public class RecommendPlaces {
                 int count = Math.min(3, restaurants.size());
                 for (int i = 0; i < count; i++) {
                     RestaurantDTO restaurant = restaurants.get(i);
-                    System.out.println(restaurant.toString1());
+                    System.out.println(restaurant);
                 }
             }
         } else if (num2 == 3) { // 할것
@@ -143,7 +143,7 @@ public class RecommendPlaces {
                 int count = Math.min(3, attractions.size());
                 for (int i = 0; i < count; i++) {
                     AttractionDTO attraction = attractions.get(i);
-                    System.out.println(attraction.toString1());
+                    System.out.println(attraction);
                 }
             }
         } else {

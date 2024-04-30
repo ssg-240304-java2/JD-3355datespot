@@ -48,11 +48,5 @@ public class RestaurantDTO extends AllPlaceDTO {
                 ", reservation=" + reservation +
                 '}';
     }
-    public String toString1() { //출력결과를 깔끔하게 하고 싶어서 추가한 부분(고유진)
-        return super.toString1() +
-                ", 추천메뉴='" + recommendMenu + '\'' +
-                ", blueRibbon=" + blueRibbon +
-                ", 예약여부=" + reservation +
-                '}';
-    }
+
 }
