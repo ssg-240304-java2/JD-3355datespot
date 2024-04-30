@@ -3,6 +3,7 @@ import date3355_project.Model.dto.AllPlaceDTO;
 import date3355_project.Model.dto.AttractionDTO;
 import date3355_project.Model.dto.CafeDTO;
 import date3355_project.Model.dto.RestaurantDTO;
+import date3355_project.view.MainMenu;
 
 import javax.print.attribute.standard.DateTimeAtCompleted;
 import java.time.LocalDate;
@@ -25,7 +26,7 @@ public class PlaceRecommend {
 
 
     public  void placeRecommend() {
-
+        MainMenu menu = new MainMenu();
         Scanner sc = new Scanner(System.in);
         System.out.println("나만의 장소를 추천 하시겠습니까? Y OR N");
         String userInput = sc.nextLine().toUpperCase();
@@ -49,6 +50,7 @@ public class PlaceRecommend {
 
             if (num > 3 || num <=0) {
                 System.out.println("잘못된 번호입니다");
+                menu.mainMenu();
             } else {
 
 
@@ -68,12 +70,14 @@ public class PlaceRecommend {
                             informationPlaceCafe(sc, region);
                         } else {
                             System.out.println("해당 지역은 현재 지원되지 않습니다.");
+                            menu.mainMenu();
                         }
 
                         System.out.println("===== 추가된 '카페' 장소 목록 =====");
                         for (CafeDTO cafe : cafes) {
                             System.out.println(cafe.toString1());
                         }
+                        menu.mainMenu();
 
                         break;
                     case 2: // 식당 정보 추가
@@ -83,12 +87,15 @@ public class PlaceRecommend {
                             informationPlaceRestaurant(sc, region);
                         } else {
                             System.out.println("해당 지역은 현재 지원되지 않습니다.");
+                            menu.mainMenu();
                         }
 
                         System.out.println("===== 추가된 '식당' 장소 목록 =====");
                         for (RestaurantDTO restaurants : restaurant) {
                             System.out.println(restaurants.toString1());
                         }
+                        menu.mainMenu();
+
 
                         break;
                     case 3:
@@ -98,13 +105,14 @@ public class PlaceRecommend {
                             informationPlaceAttration(sc, region);
                         } else {
                             System.out.println("해당 지역은 현재 지원되지 않습니다.");
+                            menu.mainMenu();
                         }
 
                         System.out.println("===== 추가된 '볼거리 OR 할거리' 목록 =====");
                         for (AttractionDTO attrationss : attrations) {
                             System.out.println(attrationss.toString1());
                         }
-
+                        menu.mainMenu();
                         break;
 
                     default:
@@ -117,6 +125,7 @@ public class PlaceRecommend {
 
             else{
                 System.out.println("아쉽네요~ 다음에 알려주세요~");
+                menu.mainMenu();
             }
 
 
@@ -200,19 +209,6 @@ public class PlaceRecommend {
 
             attrations.add(attration);
         }
-
-
-//    public void initalData(List<AllPlaceDTO> places) {  // 이거 하면 place 에 저장되는건가?
-//        for (AllPlaceDTO place : places) {
-//            if (place instanceof CafeDTO) {
-//                cafes.add((CafeDTO) place);
-//            } else if (place instanceof RestaurantDTO) {
-//                restaurant.add((RestaurantDTO) place);
-//            } else if (place instanceof AttractionDTO) {
-//                attrations.add((AttractionDTO) place);
-//            }
-//        }
-//    }
 
     }
 
