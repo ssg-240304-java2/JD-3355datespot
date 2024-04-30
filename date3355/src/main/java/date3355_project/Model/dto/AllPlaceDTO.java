@@ -13,10 +13,10 @@ public class AllPlaceDTO {
     private String closedDay;       // 휴무일
     private String information;     // 설명
 
-    // 휴무요일은 어떠한 타입으로 선언해야 할지 미정이라 일단 String으로 설정
+    // 휴무요일은 어떠한 타입으로 선언해야 할지 미정이라 일단 String 으로 설정
     // 이용가능여부는 오픈시간과 마감시간 데이터로 기능 파트에서 구현할 가능성이 있어서 비워놨습니다.
 
-    // Constructor, 생성자에 설명까지 붙여서 생성해야 하면 너무 길어질거 같아서 설명 넣기는 getter, setter로 뺏습니다!
+    // Constructor, 생성자에 설명까지 붙여서 생성해야 하면 너무 길어질거 같아서 설명 넣기는 getter, setter 로 뺏습니다!
     public AllPlaceDTO() {
     }
 
@@ -100,7 +100,18 @@ public class AllPlaceDTO {
     // toString
     @Override
     public String toString() {
-        return ", placeName='" + placeName + '\'' +
+        return " placeName='" + placeName + '\'' +
+                ", region='" + region + '\'' +
+                ", parkingLot=" + parkingLot +
+                ", price=" + price +
+                ", openTime=" + openTime +
+                ", closeTime=" + closeTime +
+                ", closedDay='" + closedDay + '\''
+                ;
+    }
+
+    public String toString1() {
+        return "NEW placeName='" + placeName + '\'' +
                 ", region='" + region + '\'' +
                 ", parkingLot=" + parkingLot +
                 ", price=" + price +

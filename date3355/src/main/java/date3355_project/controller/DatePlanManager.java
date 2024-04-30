@@ -1,8 +1,6 @@
 package date3355_project.controller;
-
 import date3355_project.Model.dto.AllPlaceDTO;
 import date3355_project.Model.vo.InitData;
-
 import java.util.ArrayList;
 import java.util.List;
 
