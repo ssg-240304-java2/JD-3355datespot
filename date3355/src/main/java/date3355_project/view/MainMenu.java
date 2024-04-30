@@ -1,31 +1,53 @@
 package date3355_project.view;
 
-import date3355_project.Model.dto.AllPlaceDTO;
 import date3355_project.controller.DatePlanManager;
-import date3355_project.controller.RecommendPlaces;
+import date3355_project.controller.SearchPlaces;
 
 import java.util.Scanner;
 
 public class MainMenu {
 
+    DatePlanManager dpm = new DatePlanManager();
+    MainView view = new MainView();
     Scanner sc = new Scanner(System.in);
-    private DatePlanManager dpm = new DatePlanManager();
-    RecommendPlaces recommendPlaces = new RecommendPlaces();
+    SearchPlaces search = new SearchPlaces();
 
-
+    public int selectMenu() {
+        view.mainView();
+        return sc.nextInt();
+    }
 
     public void mainMenu() {
 
         dpm.initInsert();
-//        for(AllPlaceDTO i : dpm.getPlaces()) {
-//            System.out.println("id = " + (dpm.getPlaces().indexOf(i) + 1)  + i.toString());
-//        }
+        System.out.println("최근 추가된 장소 : " + dpm.getPlaces().get(dpm.getPlaces().size()-1).getPlaceName());
 
-        // 실행될 부분 불러오기
-        dpm.recommendPlaces();
+        int selcted;
+        do{
+            selcted = selectMenu();
 
+            switch (selcted) {
+                case 1:
+                    dpm.searchPlaces();
+                    // 검색기능
+                    break;
+                case 2:
+                    dpm.recommendPlaces();
+                    // 지역별 추천 코스
+                    break;
+                case 3:
+                    dpm.placeRecommend();
+                    // 추천 장소 등록
+                    break;
+                case 0: // 프로그램 종료
+                    System.out.println("프로그램을 종료합니다.👋");
+                    return;
+                default:
+                    System.out.println("잘못입력하셨습니다!! 1,2,3,0 중 한 개를 입력해주세요!!");
+                    break;
+            }
+        } while (selcted != 3);
     }
-
 
 
 }
