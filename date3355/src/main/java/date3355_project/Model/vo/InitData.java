@@ -8,9 +8,17 @@ import date3355_project.Model.dto.RestaurantDTO;
 import java.time.LocalDate;
 import java.util.List;
 
+import static date3355_project.controller.PlaceRecommend.*;
+
 public class InitData {
 
+
+
+
     public void initalData(List<AllPlaceDTO> places) {
+
+
+
 
         // 강남구 데이터
         places.add(new CafeDTO("셀렉티드마롱", "강남구", true, 5000, "08:00:00", "22:00:00", null, "티라미수 플래터", false));

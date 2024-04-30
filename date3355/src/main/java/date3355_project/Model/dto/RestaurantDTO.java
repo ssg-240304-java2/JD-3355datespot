@@ -48,5 +48,11 @@ public class RestaurantDTO extends AllPlaceDTO {
                 ", reservation=" + reservation +
                 '}';
     }
-
+    public String toString1() {
+        return super.toString1() +
+                "  recommendMenu='" + recommendMenu + '\'' +
+                ", blueRibbon=" + blueRibbon +
+                ", reservation=" + reservation +
+                '}';
+    }
 }

@@ -20,6 +20,12 @@ public class AttractionDTO extends AllPlaceDTO {
         this.reservation = reservation;
     }
 
+
+
+    public AttractionDTO() {
+
+    }
+
     public String getSubCategory() {
         return subCategory;
     }
@@ -61,6 +67,13 @@ public class AttractionDTO extends AllPlaceDTO {
                 ", reservation=" + reservation +
                 '}';
     }
-
+    public String toString1() {
+        return super.toString1() +
+                "  subCategory='" + subCategory + '\'' +
+                ", startDate=" + startDate +
+                ", endDate=" + endDate +
+                ", reservation=" + reservation +
+                '}';
+    }
 
 }
