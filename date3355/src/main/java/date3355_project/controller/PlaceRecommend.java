@@ -18,7 +18,7 @@ public class PlaceRecommend {
     private static final List<RestaurantDTO> restaurant = new ArrayList<>(); //restaurant 를 클래스의 멤버 변수
     private static final List<AttractionDTO> attrations = new ArrayList<>(); //볼거리 or 할거리 클래스의 멤버 변수
 
-    DatePlanManager datePlanManager = new DatePlanManager();
+//    DatePlanManager datePlanManager = new DatePlanManager();
     List<AllPlaceDTO> places = new ArrayList<>();
 
     // 상속 받았는데 리스트는 상속 받는게 아닌가요...?ㅋㅎㅋㅎ
@@ -47,11 +47,13 @@ public class PlaceRecommend {
             sc.nextLine();
 
 
+            if (num > 3 || num <=0) {
+                System.out.println("잘못된 번호입니다");
+            } else {
 
 
-
-            System.out.println("지역을 입력하세요 (예: 강남구, 성북구 , 영등포구 , 강동구 , 송파구):");
-            String region = sc.nextLine();
+                System.out.println("지역을 입력하세요 (예: 강남구, 성북구 , 영등포구 , 강동구 , 송파구):");
+                String region = sc.nextLine();
 
 
 //            for(DatePlanManager i :datePlanManager){
@@ -61,9 +63,8 @@ public class PlaceRecommend {
 
                 switch (num) {
                     case 1: //카페
-
                         if (region.equals("강남구") || region.equals("성북구") || region.equals("영등포구") || region.equals("강동구") || region.equals("송파구")) {
-                            datePlanManager.initInsert();
+//                            datePlanManager.initInsert();
                             informationPlaceCafe(sc, region);
                         } else {
                             System.out.println("해당 지역은 현재 지원되지 않습니다.");
@@ -78,7 +79,7 @@ public class PlaceRecommend {
                     case 2: // 식당 정보 추가
 
                         if (region.equals("강남구") || region.equals("성북구") || region.equals("영등포구") || region.equals("강동구") || region.equals("송파구")) {
-                            datePlanManager.initInsert();
+//                            datePlanManager.initInsert();
                             informationPlaceRestaurant(sc, region);
                         } else {
                             System.out.println("해당 지역은 현재 지원되지 않습니다.");
@@ -110,7 +111,11 @@ public class PlaceRecommend {
                         System.out.println("잘못된 번호입니다.");
                         break;
                 }
-            } else{
+            }
+
+        }
+
+            else{
                 System.out.println("아쉽네요~ 다음에 알려주세요~");
             }
 
