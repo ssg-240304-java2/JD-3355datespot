@@ -37,4 +37,13 @@ public class CafeDTO extends AllPlaceDTO {
                 ", blueRibbon=" + blueRibbon +
                 '}';
     }
+    public String toString1() {
+
+          return super.toString1() +
+                " recommendMenu='" + recommendMenu + '\'' +
+                ", blueRibbon=" + blueRibbon +
+                '}';
+    }
+
+
 }
