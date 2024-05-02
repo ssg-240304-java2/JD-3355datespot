@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class SearchPlaces {
 
     Scanner sc = new Scanner(System.in);
+    OpenStatus op = new OpenStatus();
 
     // 조회 방식 선택 메소드
     public void searchPage(List<AllPlaceDTO> places) {
@@ -95,6 +96,7 @@ public class SearchPlaces {
                 cnt++;
                 System.out.print("[" + (places.indexOf(i) + 1) + "] ");
                 printForm(i, 2);
+                System.out.println("영업상태 : " + op.openStatus(i));
             }
         }
         if(cnt == 0) System.out.println("해당 조건을 만족하는 장소가 없습니다!");
