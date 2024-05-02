@@ -12,6 +12,7 @@ import java.util.*;
 public class RecommendPlaces {
 //    DatePlanManager datePlanManager = new DatePlanManager();
     Scanner sc = new Scanner(System.in);
+    OpenStatus op = new OpenStatus();
 
 
     //지역별로 나누었을 때 필드를 새로운 List에 담을 수 있도록 새롭게 생성
