@@ -97,6 +97,7 @@ public class SearchPlaces {
                 System.out.print("[" + (places.indexOf(i) + 1) + "] ");
                 printForm(i, 2);
                 System.out.println("영업상태 : " + op.openStatus(i));
+                System.out.println("---------------------------------------------");
             }
         }
         if(cnt == 0) System.out.println("해당 조건을 만족하는 장소가 없습니다!");
@@ -114,7 +115,6 @@ public class SearchPlaces {
             System.out.println(i.getPlaceName());
             System.out.println("지역 : " + i.getRegion() + " / 가격 : " + numberFormat.format(i.getPrice()) + " / 주차장 유무 : " + (i.isParkingLot() ? "Y" : "N"));
             System.out.println("오픈시간 : " + i.getOpenTime() + " / 마감시간 : " + i.getCloseTime() + " / 휴무일 : " + (Objects.isNull(i.getClosedDay()) ? "X" : i.getClosedDay()));
-            System.out.println("---------------------------------------------");
         }
     }
 }
